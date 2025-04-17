@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 
 FB_APP_ID=os.environ.get('ID')
 FB_APP_SECRET=os.environ.get('SECRET')
-FB_REDIRECT_URI='http://127.0.0.1:8000/facebook/callback/'
+FB_REDIRECT_URI='https://mark-utfp.onrender.com/facebook/callback/'
 
 
 def facebook_login(request):
