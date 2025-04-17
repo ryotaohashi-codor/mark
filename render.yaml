@@ -11,7 +11,7 @@ services:
     env: python
     region: singapore
     buildCommand: './build.sh'
-    startCommand: "python -m gunicorn mark.asgi:application -k uvicorn.workers.UvicornWorker"
+    startCommand: "gunicorn mark.wsgi:application"
     plan: free
     branch: main
     healthCheckPath: /
