@@ -1,7 +1,7 @@
 databases:
   - name: api
     region: singapore
-    plan: free
+    plan: starter
     databaseName: api
     user: django_user
 
@@ -12,7 +12,7 @@ services:
     region: singapore
     buildCommand: './build.sh'
     startCommand: "python -m gunicorn mark.asgi:application -k uvicorn.workers.UvicornWorker"
-    plan: starter
+    plan: free
     branch: main
     healthCheckPath: /
     envVars:
