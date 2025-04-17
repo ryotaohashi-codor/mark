@@ -15,7 +15,7 @@ def facebook_login(request):
         f"https://www.facebook.com/v22.0/dialog/oauth"
         f"?client_id={FB_APP_ID}"
         f"&redirect_uri={FB_REDIRECT_URI}"
-        f"&scope=public_profile"
+        f"&scope=public_profile, email"
 
     )
     return redirect(auth_url)
