@@ -4,7 +4,7 @@ from django.shortcuts import redirect, render
 from django.http import JsonResponse
 from dotenv import load_dotenv
 
-
+load_dotenv()
 FB_APP_ID=os.environ.get('ID')
 FB_APP_SECRET=os.environ.get('SECRET')
 FB_REDIRECT_URI='https://mark-utfp.onrender.com/facebook/callback/'
