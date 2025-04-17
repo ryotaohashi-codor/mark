@@ -22,9 +22,10 @@ def facebook_login(request):
 
 
 def facebook_callback(request):
+    print("GET parameters:", request.GET)
     code = request.GET.get("code")
     if not code:
-        return JsonResponse({"error": "認証コードがありません"}, status=400)
+        return JsonResponse({"error": "認証コードがありません", "params": request.GET.dict()}, status=400)
 
     token_url = (
         f"https://graph.facebook.com/v22.0/oauth/access_token"
